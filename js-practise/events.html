@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: lightgrey;
+
+    }
+    .main{
+        background-color:grey;
+        height: 660px;
+    }
+    .image{
+	    width : 200px;
+		height : 150px;
+		padding:4px
+	}
+</style>
+<body>
+    <div class="main">
+        <ul id="images">
+            <li>
+                <img src="images/mockey.jpg" id="Mockey" class="image" >
+            </li>
+            <li>
+                <img src="images/i.jpg" id="sky" class="image" >
+            </li>
+            <li>
+                <img src="images/2.jpg" id="html" class="image" >
+            </li>
+            <li>
+                <img src="images/img.jpg" id="nature" class="image">
+            </li>
+        </ul>
+       <li> 
+	   <a href="https://google.com" id="google"/>Google </a>
+	   </li>
+    </div>
+</body>
+<script>
+//    
+
+// document.getElementById('sky').onclick = function(){
+   // alert('sky clicked');
+  // }
+  //target,toelement, srcElement, currentElement, clientX,clientY, screenX,screenY, altkey, ctrlkey,shiftkey,keyCode
+       
+	  /* document.getElementById('images').addEventListener('click', function(e){
+	    console.log("click the inside ul");
+	   },false)
+	  
+    document.getElementById('nature').addEventListener('click', function(e){
+	  console.log("nature click");
+	  e.stopPropagation();
+	},false)
+     
+	 document.getElementById('google').addEventListener('click',function(e){
+	  
+	   e.preventDefault();
+	   console.log(e);
+	   e.stopPropagation();
+	   console.log('google click');
+	 },false);*/
+	 
+     document.querySelector('#images').addEventListener('click',function(e){
+	  
+      console.log(e.target.tagName);
+      if(e.target.tagName ==='IMG'){
+       
+       console.log(e.target.id);
+      
+      let removeIt = e.target.parentNode
+      
+      removeIt.remove();
+     }
+   },false);
+   
+</script>
+</html>

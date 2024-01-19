@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+      <button>click btn</button>
+</body>
+  <script>
+    class user{
+        constructor(){
+          this.server = "http://localHost:3002"
+          this.Library = "React"  
+
+          document.querySelector('button')
+          .addEventListener('click', this.handleClick.bind(this))
+        
+        }
+
+         handleClick(){
+            console.log("button click")
+            console.log(this)
+         } 
+    }
+  
+    const app = new user()
+  </script>
+
+</html>

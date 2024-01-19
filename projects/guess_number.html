@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<br lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Right Number</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: #fff;
+    }
+
+    .center {
+        display: flex;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(26, 60, 91);
+    }
+</style>
+
+<body class="center" >
+
+<h1> Number Guessing Game</h1>
+<p> Try and guess a random Number between 1 to 100.</p>
+<p> You have 10 attempts to guess the right number</p>
+
+<form class="form">
+    <label id="guess"> Guess A number</label></form></br>
+    <input type="text" id="guessField"></br></br>
+    <input type="submit" id="subt" value="Submit guess">
+</form>
+
+<div class="resultParas">
+    <p> Previous Guesses : <span class="guesses"></span></p>
+    <p> Guesses Remaining : <span class="lastResult">10</span></p>
+    <p class="lowOrhi"></p>
+</div>
+
+</div>
+</body>
+<script src="number.js"></script>
+
+
+</html>

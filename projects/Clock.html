@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #212121;
+        color: #fff;
+    }
+
+    .center {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #demo {
+        font-size: 40px;
+        background-color: orange;
+        padding: 20px 50px;
+        margin-top: 10px;
+        border-radius: 100px;
+    }
+
+    #demo2 {
+
+        font-size: 40px;
+        background-color: orange;
+        padding: 20px 50px;
+        margin-top: 10px;
+        border-radius: 100px;
+
+    }
+</style>
+
+<body>
+    <div class="center">
+       
+        <span id="demo"></span>
+        <span id="demo2"></span>
+    </div>
+</body>
+<script>
+    const clock = document.querySelector('#demo');
+    //const clock = document.getElementById('demo');
+
+    console.log(clock)
+
+    setInterval(function () {
+        let date = new Date;
+      
+        demo.innerHTML = date.toLocaleTimeString();
+        demo2.innerHTML = date.toDateString();
+        
+    }, 1000)
+
+</script>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Vicky Rai </h1>
+    <button id="start">START</button>
+    <button id="stop"> STOP</button>
+
+</body>
+<script>
+    // 1   setTimeout(function(){ 
+    //      document.write("hello v")
+    //    },2000)
+
+
+    //  2  const sayhi = function(){
+    //     document.write("hello v")
+    //    }
+    //    setTimeout(sayhi,2000)
+
+    //3 const changeText = function () {
+    //     document.querySelector('h1').innerHTML = 'bye=bye'
+
+    // }
+
+
+    // const changeme = setTimeout(changeText, 5000)
+
+    // document.querySelector('#stop').addEventListener('click',function(){
+    //     clearTimeout(changeme);
+    //     document.write("stopped")
+    // })
+
+
+    // setinterval function
+
+    //1 setInterval(function(){
+    //     document.write("hi")
+    // },1000)
+
+    // const sayhi = function (str) {
+    //     document.write(str, "hello")
+    // }
+    // const invalid = setInterval(sayhi, 1000, "hi")
+
+    //clearInterval(invalid);
+let invalid ;
+    document.querySelector('#start').addEventListener('click', function () {
+     invalid = setInterval(function () {
+            console.log('heelo', Date.now());
+        }, 1000);
+    })
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(invalid);
+        
+       
+    })
+
+
+   
+
+
+</script>
+
+</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121;color:#fff;">
+    <input type="text"  id="value">
+    <ul class=" language">
+        <li>Javascript</li>
+
+    </ul>
+</body>
+<script>
+     //1 approach
+    function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`
+        document.querySelector('.language'). appendChild(li)
+           
+    }
+   
+    addLanguage("Python");
+//2 second approach
+    function addOptimizeLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+
+    }
+    addOptimizeLanguage("Ruby");
+
+    document.getElementById("value").addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            const inputValue = document.getElementById("value").value;
+            addLanguage(inputValue);
+            document.getElementById("value").value = ''; // Clear the input field
+        }
+    });
+  
+
+    //edit
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML='mojo';
+    const newli = document.createElement("li")
+    newli.textContent="React"
+    secondLang.replaceWith(newli);
+
+
+  // edit2
+
+  const firtLang = document.querySelector("li:first-child")
+  firtLang.outerHTML= "<li>Typescript</li>"
+
+  const third = document.querySelector("li:last-child")
+  third.remove()
+
+</script>
+
+</html>
