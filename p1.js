@@ -69,6 +69,7 @@ for(let i = arr.length-1; i>=0;i--){
  console.log(name);
 
 //how to add the array values
+                                                     
 //how to delete the array values
 //how to find the length of the array
 //how to compare the array
